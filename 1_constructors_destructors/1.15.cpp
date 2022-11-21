@@ -1,9 +1,13 @@
 // Какие конструкторы и деструкторы и в каком порядке будут выполняться при
 // работе следующего фрагмента программы:
 
-class A {};
-class B : public A {};
-class C : public B {};
+#include <iostream>
+using namespace std;
+class A {void print(){cout << "A";}};
+class B : public A {void print(){cout << "B";}};
+class C : public B {void print(){cout << "C";}};
+
+// C B 
 
 int main()
 {
